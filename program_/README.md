@@ -16,21 +16,6 @@
     - Note: The example has been developed on Kubuntu 21.04.
     - Note: Use WSL on Windows.
 
-1. Check you've installed [Node.js](https://nodejs.org/):
-    ```bash
-    node --version # v12.21.0
-    ```
-
-1. Check you've installed [Yarn](https://yarnpkg.com/):
-    ```bash
-    yarn --version # 1.22.15
-    ```
-
-1. Check you've installed [Anchor](https://github.com/project-serum/anchor):
-    ```bash
-    anchor --version # 0.17.0
-    ```
-
 1. Go to the `/program` directory.
 
 1. Start Solana localnet:

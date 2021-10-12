@@ -1,4 +1,6 @@
-/*-dump.txt
-/*.so
-/target/
-/test-ledger
+
+.anchor
+.DS_Store
+target
+**/*.rs.bk
+node_modules
