@@ -1,12 +1,12 @@
 [programs.localnet]
-program = "Fg6PaFpoGXkYsidMpWTK6W2BeZ7FEfcYkg476zPFsLnS"
+program = "4dKeVRjqyVNA3n48d1RGf3k2f8fEo1fGsUMPSmsHW4LG"
 
 [registry]
 url = "https://anchor.projectserum.com"
 
 [provider]
 cluster = "localnet"
-wallet = "/home/martin/.config/solana/id.json"
+wallet = "keypairs/system-program-keypair.json"
 
 [scripts]
 test = "mocha -t 1000000 tests/"

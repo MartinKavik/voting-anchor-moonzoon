@@ -50,12 +50,13 @@
 
 1. Build the program:
     ```bash
-    cargo build-bpf
+    anchor deploy
     ```
 
 1. Deploy the program:
     ```bash
     solana program deploy -C ./config.yml --program-id ./keypairs/program-keypair.json ./target/deploy/voting_program.so
     ```
+    - Note: We can't (?) set a custom keypair with `anchor deploy`.
 
 1. Continue in [/app/README.md](../app/README.md).
