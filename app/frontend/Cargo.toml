@@ -1,0 +1,34 @@
+[package]
+version = "0.1.0"
+name = "frontend"
+repository = "https://github.com/MartinKavik/voting-solana-moonzoon"
+authors = ["Martin Kavík <martin@kavik.cz>"]
+description = "Voting example (Solana + MoonZoon)"
+categories = ["MoonZoon", "Solana", "example"]
+readme = "../README.md"
+keywords = ["moonzoon", "solana", "blockchain", "fullstack", "example"]
+edition = "2018"
+resolver = "2"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+zoon = { git = "https://github.com/MoonZoon/MoonZoon", rev = "a1ed81c" }
+shared = { path = "../shared", features = ["frontend"] }
+voting_program = { path = "../../program", features = ["no-entrypoint"]  }
+borsh = "=0.9.1"
+
+# @TODO_QUESTION Replace with stable solana-* versions. 
+# We need newer memmap2 (it's a transitive depedency), 
+# because older versions can't be compiled on Wasm (https://github.com/RazrFalcon/memmap2-rs/pull/10/files).
+#
+# Commit 92e72d99 seems to work with Solana 1.7.12.
+#
+# (No luck with disabling the `solana-sdk` feature `memmap2`.)
+#
+# solana-sdk = { version = "=1.7.12", default-features = false }
+solana-sdk = { git = "https://github.com/solana-labs/solana", rev="92e72d99" }
+
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = ['-Oz']

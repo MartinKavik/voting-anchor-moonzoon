@@ -1,0 +1,21 @@
+[package]
+version = "0.1.0"
+name = "backend"
+repository = "https://github.com/MartinKavik/voting-solana-moonzoon"
+authors = ["Martin Kavík <martin@kavik.cz>"]
+description = "Voting example (Solana + MoonZoon)"
+categories = ["MoonZoon", "Solana", "example"]
+readme = "../README.md"
+keywords = ["moonzoon", "solana", "blockchain", "fullstack", "example"]
+edition = "2018"
+resolver = "2"
+
+[dependencies]
+moon = { git = "https://github.com/MoonZoon/MoonZoon", rev = "a1ed81c" }
+shared = { path = "../shared", features = ["backend"] }
+borsh = "=0.9.1"
+# solana-sdk = "=1.7.12"
+solana-sdk = { git = "https://github.com/solana-labs/solana", rev="92e72d99" }
+# solana-client = "=1.7.12"
+solana-client = { git = "https://github.com/solana-labs/solana", rev="92e72d99" }
+voting_program = { path = "../../program", features = ["no-entrypoint"]  }

@@ -1,0 +1,19 @@
+[package]
+version = "0.1.0"
+name = "shared"
+repository = "https://github.com/MartinKavik/voting-solana-moonzoon"
+authors = ["Martin Kavík <martin@kavik.cz>"]
+description = "Voting example (Solana + MoonZoon)"
+categories = ["MoonZoon", "Solana", "example"]
+keywords = ["moonzoon", "solana", "blockchain", "fullstack", "example"]
+readme = "../README.md"
+edition = "2018"
+
+[dependencies]
+moonlight = { git = "https://github.com/MoonZoon/MoonZoon", rev = "a1ed81c" }
+# solana-sdk = "=1.7.12"
+solana-sdk = { git = "https://github.com/solana-labs/solana", rev="92e72d99" }
+
+[features]
+frontend = ["moonlight/frontend"]
+backend = ["moonlight/backend"]
