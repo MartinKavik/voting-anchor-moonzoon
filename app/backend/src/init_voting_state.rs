@@ -3,7 +3,7 @@ use moon::tokio::task;
 use solana_sdk::{
     message::Message, signature::Signer, system_instruction, transaction::Transaction,
 };
-use voting_program::{self, instruction as voting_instruction, state::VotingState};
+use voting_program::{self, instruction_api as voting_instruction, VotingState};
 
 pub async fn init_voting_state() -> VotingState {
     let voting_owner_pubkey = solana_helpers::voting_owner_keypair().pubkey();

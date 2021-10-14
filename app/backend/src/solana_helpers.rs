@@ -10,7 +10,7 @@ use solana_sdk::{
         Signer,
     },
 };
-use voting_program::{self, state::VotingState};
+use voting_program::{self, VotingState};
 
 pub fn voting_owner_keypair() -> &'static Keypair {
     static INSTANCE: OnceCell<Keypair> = OnceCell::new();

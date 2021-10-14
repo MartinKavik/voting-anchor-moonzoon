@@ -12,7 +12,7 @@ use solana_sdk::{
     signer::{keypair::Keypair, Signer},
     transaction::Transaction,
 };
-use voting_program::{instruction as voting_instruction, state::VotingState};
+use voting_program::{instruction_api as voting_instruction, VotingState};
 
 pub fn create_and_send_transaction(fee_payer_keypair: Keypair, party_name: String) {
     super::set_status("Adding the party...");

@@ -16,7 +16,7 @@ crate-type = ["cdylib"]
 [dependencies]
 zoon = { git = "https://github.com/MoonZoon/MoonZoon", rev = "a1ed81c" }
 shared = { path = "../shared", features = ["frontend"] }
-voting_program = { path = "../../program", features = ["no-entrypoint"]  }
+voting_program = { path = "../../program/programs/voting_program", features = ["no-entrypoint"]  }
 borsh = "=0.9.1"
 
 # @TODO_QUESTION Replace with stable solana-* versions. 

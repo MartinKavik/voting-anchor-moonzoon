@@ -18,4 +18,4 @@ borsh = "=0.9.1"
 solana-sdk = { git = "https://github.com/solana-labs/solana", rev="92e72d99" }
 # solana-client = "=1.7.12"
 solana-client = { git = "https://github.com/solana-labs/solana", rev="92e72d99" }
-voting_program = { path = "../../program", features = ["no-entrypoint"]  }
+voting_program = { path = "../../program/programs/voting_program", features = ["no-entrypoint"]  }

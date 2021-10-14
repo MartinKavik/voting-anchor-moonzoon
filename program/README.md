@@ -50,7 +50,7 @@
 
 1. Build the program:
     ```bash
-    anchor deploy
+    anchor build
     ```
 
 1. Deploy the program:

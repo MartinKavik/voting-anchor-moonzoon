@@ -3,7 +3,7 @@ use moon::{tokio::task, *};
 use shared::*;
 use solana_sdk::pubkey::Pubkey;
 use std::sync::Arc;
-use voting_program::state::Party as PartyState;
+use voting_program::Party as PartyState;
 
 mod solana_helpers;
 

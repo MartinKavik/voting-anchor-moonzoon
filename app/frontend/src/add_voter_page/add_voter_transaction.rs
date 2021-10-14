@@ -13,7 +13,7 @@ use solana_sdk::{
     signer::{keypair::Keypair, Signer},
     transaction::Transaction,
 };
-use voting_program::{instruction as voting_instruction, state::VoterVotes};
+use voting_program::{instruction_api as voting_instruction, VoterVotes};
 
 pub fn create_and_send_transaction(voting_owner_keypair: Keypair, voter_pubkey: Pubkey) {
     let (add_voter_ix, voter_votes_pubkey) =
