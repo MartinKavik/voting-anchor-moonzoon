@@ -1,5 +1,7 @@
 ![MoonZoon Solana logos](./docs/images/MoonZoon_Solana.png)
 
+**Warning**: The implementation is blocked by https://github.com/project-serum/anchor/issues/883 - Anchor seems to be designed to work only with JS clients and I don't have enough free time and motivation to go through xxx lines of macros and JS atm, help welcome. See the original Rust-only [Voting example](https://github.com/MartinKavik/voting-solana-moonzoon) with the "raw" Solana API. 
+
 # Voting example (with Anchor)
 
 The [Rust](https://www.rust-lang.org/)-only Voting example based on MoonZoon and Solana.
